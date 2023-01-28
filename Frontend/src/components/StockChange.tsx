@@ -28,7 +28,7 @@ export default function StockChange(StockChangeProps: StockChangeProps) {
           justifyContent: "space-between",
           width: "35%",
           height: "100%",
-          marginRight: 15
+          marginRight: 15,
         }}
       >
         <Text style={styles.symbol}>{StockChangeProps.symbol}</Text>
@@ -76,7 +76,7 @@ export default function StockChange(StockChangeProps: StockChangeProps) {
                   : styles.increasedPriceChange,
               ]}
             >
-              {StockChangeProps.priceChange}
+              {StockChangeProps.priceChange.toFixed(2)}
             </Text>
           </View>
           <Text
@@ -87,7 +87,7 @@ export default function StockChange(StockChangeProps: StockChangeProps) {
                 : styles.increasedPercentageChange,
             ]}
           >
-            {StockChangeProps.percentageChange}%
+            {StockChangeProps.percentageChange.toFixed(2)}%
           </Text>
         </View>
       </View>
