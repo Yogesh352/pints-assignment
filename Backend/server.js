@@ -11,7 +11,6 @@ app
   .get("/stock", cors(), (req, res) => {
     apiCall.callApi(function (response) {
       res.setHeader("Content-Type", "application/json");
-
       res.write(JSON.stringify(response));
       res.end();
     });

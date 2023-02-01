@@ -1,7 +1,8 @@
-import { StatusBar } from "expo-status-bar";
+
 import { Image, Platform, StyleSheet, Text, View } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
+//component for each stock card
 interface StockChangeProps {
   imageUri: string | undefined;
   symbol: string;
@@ -63,9 +64,9 @@ export default function StockChange(StockChangeProps: StockChangeProps) {
             }}
           >
             {StockChangeProps.priceChange < 0 ? (
-              <Ionicons name="arrow-up-outline" size={12} color={"red"} />
+              <Ionicons name="arrow-up-outline" size={14} color={"red"} />
             ) : (
-              <Ionicons name="arrow-up-outline" size={12} color={"green"} />
+              <Ionicons name="arrow-up-outline" size={14} color={"green"} />
             )}
 
             <Text
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     flexDirection: "row",
     justifyContent: "flex-start",
-    fontSize: 10,
+    fontSize: 12,
   },
   increasedPriceChange: {
     color: "green",
@@ -142,7 +143,7 @@ const styles = StyleSheet.create({
     color: "red",
   },
   percentageChange: {
-    fontSize: 10,
+    fontSize: 12,
   },
   increasedPercentageChange: {
     color: "green",
